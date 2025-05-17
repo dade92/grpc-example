@@ -5,10 +5,10 @@ option java_multiple_files = true;
 option java_outer_classname = "UserServiceProto";
 
 service UserService {
-  rpc GetUser(GetUserRequest) returns (User);
+  rpc GetUser(UserRequest) returns (User);
 }
 
-message GetUserRequest {
+message UserRequest {
   int32 id = 1;
 }
 

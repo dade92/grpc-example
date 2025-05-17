@@ -19,7 +19,7 @@ public class GrpcServerApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         server = ServerBuilder.forPort(9090)
-            .addService(new UserServiceImpl())
+            .addService(new DefaultUserService())
             .build()
             .start();
 
