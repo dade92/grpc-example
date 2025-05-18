@@ -34,7 +34,8 @@ public class UserClient {
                 default:
                     System.err.println("Unhandled gRPC error: " + e.getStatus());
             }
-            throw e; // or return null / custom fallback
+
+            throw new UserRetrieveException("Error retrieving user with id " + id, e);
         }
     }
 
