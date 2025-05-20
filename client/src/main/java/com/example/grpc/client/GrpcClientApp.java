@@ -14,7 +14,7 @@ public class GrpcClientApp {
 
         UserClient client = new UserClient(channel);
 
-        User user = client.retrieve(-1);
+        User user = client.retrieve(1);
 
         System.out.println("Received User: ID = " + user.getId() + ", Name = " + user.getName());
 
